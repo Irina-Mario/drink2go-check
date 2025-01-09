@@ -1,0 +1,22 @@
+
+.navigation__item {
+min-height: 57px;
+border-top: 1px solid $lightest-grey;
+width: 100%;
+margin: 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+
+.navigation__item-link {
+color: $base-black;
+align-self: center;
+letter-spacing: 0,02px;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px;
+text-transform: uppercase;
+}

@@ -1,0 +1,266 @@
+.footer__container {
+  padding: 20px 20px 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
+}
+
+.footer__copyright-content {
+  display: flex;
+  justify-content: center;
+  width: 280px;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-grey;
+  padding: 20px 20px 30px 20px;
+  
+}
+
+.copyright__link {
+  text-decoration: none;
+}
+
+.copyright__link svg {
+  fill: $base-grey;
+}
+
+.copyright__link:hover svg {
+  fill: $base-primary;
+}
+
+.copyright__link:active svg {
+  fill: $primary-darker;
+}
+
+.page-footer__inner {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__block {
+  padding-bottom: 19px;
+  border-bottom: 1px solid $base-secondary;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% / 3);
+    padding-left: 0;
+    padding-right: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 25%;
+    margin-bottom: 16px;
+  }
+}
+
+.footer__block-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 350px;
+  }
+}
+
+.footer_inner-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+.footer__block-menu {
+  padding-top: 20px;
+  @media (min-width: $desktop-width) {
+    margin-top: 8px;
+    padding-left: 9px;
+  }
+}
+
+.footer__block-contact {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding-right: 0;
+  
+  @media (min-width: $desktop-width) {
+    padding-left: 23px;
+  }
+}
+
+.footer__block-contact .footer__title {
+ 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.footer__title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $base-primary;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.footer-menu {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-menu__item {
+  margin-bottom: 20px;
+}
+
+.footer-menu__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-menu__link {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: $base-black;
+  text-decoration: none;
+  padding: 0;
+
+}
+
+.footer__block a:hover {
+  color: $base-primary;
+}
+
+.footer__block a:active {
+  color: $primary-darker;
+}
+
+.page-footer__address {
+  display: flex;
+  font-style: normal;
+  color: $base-black;
+  margin-bottom: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 16px;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../icons/icon-address.svg");
+    margin-right: 6px;
+    margin-top: 1px;
+  }
+}
+
+.page-footer__phone {
+  display: flex;
+  align-items: center;
+  color: $base-black;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 16px;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../icons/icon-phone.svg");
+    margin-right: 6px;
+    margin-top: 1px;
+  }
+}
+
+.logo__text--footer {
+  display: none;
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+}
+
+.social a {
+  font-size: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.social_item {
+  text-decoration: none;
+  
+  border-radius: 4px;
+}
+
+.social_item:hover {
+  background-color: $base-secondary;
+}
+
+.social_item:active {
+  background-color: $primary-opacity-0-25;
+}
+
+.social_item svg {
+  fill: $base-grey;
+}
+
+.social_item:hover svg {
+  fill: $base-primary;
+}
+
+.social_item:active svg {
+  fill: $base-primary;
+}
+
+.footer__inner {
+  @media (min-width: $desktop-width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  }
+}
+
+.footer__logo-icon {
+  @media (min-width: $desktop-width) {
+  margin-bottom: 10px;
+  }
+}
+
+.logo__footer {
+@media (min-width: $desktop-width) {
+  display: block;
+  margin-bottom: 60px;
+  }
+}

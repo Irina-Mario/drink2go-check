@@ -186,13 +186,13 @@
       </div>
     </section>
     <section class="catalog" data-test="catalog">
-      <div class="container">
+      <div class="container catalog__container">
         <span class="catalog__badge badge">Каталог</span>
         <h2 class="catalog__title subtitle">Каталог кофейных напитков</h2>
         <div class="catalog__wrapper">
-          <div class="catalog-filter">
-            <form class="catalog-filter__form catalog-form" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="catalog-filter__price">
+          <div class="catalog__filter">
+            <form class="catalog__filter-form catalog-form" action="https://echo.htmlacademy.ru/" method="get">
+              <fieldset class="catalog-filter__price catalog-filter__group">
                 <legend class="catalog-filter__title">Цена</legend>
                 <div class="range">
                   <div class="range__scale">
@@ -211,11 +211,11 @@
                   </div>
                 </div>
                 <div class="catalog-filter__enter">
-                  <input class="catalog-filter__enter-min" placeholder="от 0">
-                  <input class="catalog-filter__enter-max" placeholder="до 900">
+                  <input class=" catalog-filter__enter-price catalog-filter__enter-min" placeholder="0">
+                  <input class="catalog-filter__enter-price catalog-filter__enter-max" placeholder="900">
                 </div>
               </fieldset>
-              <fieldset class="catalog-filter__milk">
+              <fieldset class="catalog-filter__milk catalog-filter__group">
                 <legend class="catalog-filter__title">Наличие молока</legend>
                 <ul class="catalog-filter__list">
                   <li class="catalog-filter__item">
@@ -238,13 +238,13 @@
                   </li>
                   <li class="catalog-filter__item catalog-filter__item--desabled">
                     <label class="catalog-filter__control">
-                      <input class="catalog-filter__input" type="radio" name="milk" value="no-milk">
+                      <input class="catalog-filter__input" type="radio" name="milk" value="no-milk" disabled>
                       <span class="catalog-filter__label">Без молока</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="catalog-filter__country">
+              <fieldset class="catalog-filter__country catalog-filter__group">
                 <legend class="catalog-filter__title">Страна произростания</legend>
                 <ul class="catalog-filter__list">
                   <li class="catalog-filter__item">
@@ -277,14 +277,17 @@
                   </li>
                   <li class="catalog-filter__item catalog-filter__item--desabled">
                     <label class="catalog-filter__control">
-                      <input class=" catalog-filter__input catalog-filter__input--toggle" type="checkbox" name="Peru">
+                      <input class=" catalog-filter__input catalog-filter__input--toggle" type="checkbox" name="Peru"
+                        disabled>
                       <span class="catalog-filter__label">Перу</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <button class="catalog-filter__button button" type="submit">Применить</button>
-              <button class="catalog-filter__button button-applay" type="reset">Сбросить</button>
+              <div class="catalog-filter__wrapper">
+                <button class="catalog-filter__button button-filter__submit" type="submit">Применить</button>
+                <button class="catalog-filter__button button-filter__applay" type="reset">Сбросить</button>
+              </div>
             </form>
           </div>
           <div class="catalog-cards">
@@ -292,18 +295,21 @@
               <span class="select-wrapper__title">Сортировка:</span>
               <div class="select-sorting-type">
                 <select class="select-control" aria-label="Сортировка">
-                  <option value="popular">По умолчанию</option>
-                  <option value="cheap">По цене</option>
+                  <option value="popular">по умолчанию</option>
+                  <option value="cheap">по цене</option>
+                  <option value="cheap">по популярности</option>
                 </select>
               </div>
             </div>
             <div class="catalog-cards__wrapper product-catalog">
               <ul class="product-catalog__list">
                 <li class="product-catalog__item product-card">
-                  <picture>
-                    <img class="product-card__image" src="images/product/product-1@1x.png"
-                      srcset="images/product/product-1@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
-                  </picture>
+                  <div class="product-catalog__img-wrapper">
+                    <picture>
+                      <img class="product-card__image" src="images/product/product-1@1x.png"
+                        srcset="images/product/product-1@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                    </picture>
+                  </div>
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__describe">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <div class="product-card__order-wrapper">
@@ -312,10 +318,12 @@
                   </div>
                 </li>
                 <li class="product-catalog__item product-card">
-                  <picture>
-                    <img class="product-card__image" src="images/product/product-2@1x.png"
-                      srcset="images/product/product-2@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
-                  </picture>
+                  <div class="product-catalog__img-wrapper">
+                    <picture>
+                      <img class="product-card__image" src="images/product/product-2@1x.png"
+                        srcset="images/product/product-2@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                    </picture>
+                  </div>
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__describe">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <div class="product-card__order-wrapper">
@@ -324,10 +332,12 @@
                   </div>
                 </li>
                 <li class="product-catalog__item product-card">
-                  <picture>
-                    <img class="product-card__image" src="images/product/product-3@1x.png"
-                      srcset="images/product/product-3@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
-                  </picture>
+                  <div class="product-catalog__img-wrapper">
+                    <picture>
+                      <img class="product-card__image" src="images/product/product-3@1x.png"
+                        srcset="images/product/product-3@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                    </picture>
+                  </div>
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__describe">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <div class="product-card__order-wrapper">
@@ -336,10 +346,12 @@
                   </div>
                 </li>
                 <li class="product-catalog__item product-card">
-                  <picture>
-                    <img class="product-card__image" src="images/product/product-4@1x.png"
-                      srcset="images/product/product-4@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
-                  </picture>
+                  <div class="product-catalog__img-wrapper">
+                    <picture>
+                      <img class="product-card__image" src="images/product/product-4@1x.png"
+                        srcset="images/product/product-4@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                    </picture>
+                  </div>
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__describe">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <div class="product-card__order-wrapper">
@@ -348,10 +360,12 @@
                   </div>
                 </li>
                 <li class="product-catalog__item product-card">
-                  <picture>
-                    <img class="product-card__image" src="images/product/product-5@1x.png"
-                      srcset="images/product/product-5@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
-                  </picture>
+                  <div class="product-catalog__img-wrapper">
+                    <picture>
+                      <img class="product-card__image" src="images/product/product-5@1x.png"
+                        srcset="images/product/product-5@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                    </picture>
+                  </div>
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__describe">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <div class="product-card__order-wrapper">
@@ -360,10 +374,12 @@
                   </div>
                 </li>
                 <li class="product-catalog__item product-card">
-                  <picture>
-                    <img class="product-card__image" src="images/product/product-6@1x.png"
-                      srcset="images/product/product-6@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
-                  </picture>
+                  <div class="product-catalog__img-wrapper">
+                    <picture>
+                      <img class="product-card__image" src="images/product/product-6@1x.png"
+                        srcset="images/product/product-6@2x.png 2x" width="130" height="188" alt="Декаф Флэт Уайт.">
+                    </picture>
+                  </div>
                   <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                   <p class="product-card__describe">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
                   <div class="product-card__order-wrapper">
@@ -409,90 +425,6 @@
       </div>
     </section>
   </main>
-
-  <!-- <footer class="footer" data-test="footer">
-    <div class="container">
-      <div class="footer__social">
-        <div class="footer__social-wrapper container">
-          <a class="footer__social__link" href="#">
-            <picture>
-              <source media="(min-width: 768px)" srcset="images/icons/icon-logo-L.svg" type=" image/svg+xml">
-              <img class="footer__logo-icon" src="images/icons/icon-logo-M.svg"
-                alt="Логотип интернет магазина кофейных напитков">
-            </picture>
-          </a>
-          <div class="footer-social__container">
-            <ul class="footer-social__list social-list">
-              <li class="social-list__item">
-                <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"
-                  aria-label="Иконка Вконтакте">
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link social-list__link--printeest" href="https://ru.pinterest.com/"
-                  aria-label="Иконка Принтерест">
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a class="social-list__link social-list__link--Ok" href="https://ok.ru/"
-                  aria-label="Иконка одноклассники">
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-menu-wrapper">
-            <div class="online-store">
-              <p class="footer-menu__title">Интернет-магазин</p>
-              <ul class="online-store__list">
-                <li class="online-store__item">
-                  <a class="online-store__link" href="#">Каталог</a>
-                </li>
-                <li class="online-store__item">
-                  <a class="online-store__link" href="#">Доставка</a>
-                </li>
-                <li class="online-store__item">
-                  <a class="online-store__link" href="#">Способы оплаты</a>
-                </li>
-                <li class="online-store__item">
-                  <a class="online-store__link" href="#">О нас</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer__media">
-              <p class="footer-menu__title">Медиа</p>
-              <ul class="footer__media__list">
-                <li class="footer__media__item">
-                  <a class="footer__media__link" href="#">Блог</a>
-                </li>
-                <li class="footer__media__item">
-                  <a class="footer__media__link" href="#">Информация для сми</a>
-                </li>
-                <li class="footer__media__item">
-                  <a class="footer__media__link" href="#">Правовая информация</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="footer-contacts">
-              <p class="footer-menu__title">Контакты</p>
-              <address class="footer-contacts__address">
-                <span>Санкт-Петербург, набережная реки Карповки, дом 5</span>
-              </address>
-              <a class="footer-contact__phone" href="tel:+79999999999">Тел.: +7 (999) 999-99-99</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="footer__developer developer-link" href="">
-        <p class="developer-link__text">Разработано в HTML Academy</p>
-        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M11.2151 5.75392L5.97184 2.49957V2.49875L5.97121 2.49916L5.97058 2.49875V2.49957L0.784854 5.75013V1.40658L6.00008 0.830884L11.2151 1.40658V5.75392ZM11.211 6.32987L9.12557 7.62344L5.98451 5.65607L5.97935 6.22863L8.66414 7.9096L8.20107 8.19683L5.98451 6.80853L5.97935 7.3811L7.72892 8.47648L7.31607 8.76717L7.30606 8.77351L5.98451 7.95383L5.97935 8.52631L6.8465 9.06404L5.96315 9.62244L0.796198 6.3886L5.97058 3.1139V3.11448L11.211 6.32987ZM11.2151 11.7713L6 15.0384L0.784854 11.7713V7.02542L5.97763 10.2796L5.98631 10.8693L2.42396 8.63702L2.41871 9.20959L5.99523 11.4728L6.00407 12.0782L2.42873 9.83883L2.42356 10.4113L6 12.6745L9.60624 10.4026V7.95712L11.2151 6.94552V11.7713ZM5.99984 -3.17891e-07L0 0.662267V12.2411L6 16L12 12.2411V0.662267L5.99984 -3.17891e-07Z"
-            fill="#BDBDBD" />
-        </svg>
-      </a>
-  </footer>-->
 
   <footer class="footer">
     <div class="container footer__container">

@@ -3,6 +3,13 @@
   padding: 40px 20px 20px 20px;
   background-color: $base-white;
   margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    
+    margin-bottom: 0;
+  }
+  @media (min-width: $desktop-width) {
+    
+  }
 }
 
 .product-catalog__img-wrapper {
@@ -12,6 +19,7 @@
   margin-bottom: 24px;
 
 }
+
 
 .product-card__title {
   font-size: 18px;
@@ -50,6 +58,18 @@
   background-repeat: no-repeat;
   background-position: left 10px center;
 }
+
+.product-card__buy:hover,
+.product-card__buy:focus {
+  background-color: $primary-lighter;
+}
+
+
+.product-card__buy:active {
+  background-color: $primary-darker;
+}
+
+.product-card__buy:disabled {
+  background-color: $base-grey;
   
-
-
+}

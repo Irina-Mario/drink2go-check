@@ -3,6 +3,9 @@
     width: 320px;
     padding: 0 20px;
     margin: 0 auto;
+
+    outline: 5px solid rgba(66, 21, 192, 0.8);
+    outline-offset: -5px;
   
     @media (min-width: $tablet-width) {
       width: 768px;
@@ -14,4 +17,5 @@
       padding: 0 40px;  
     }
   }
+
 

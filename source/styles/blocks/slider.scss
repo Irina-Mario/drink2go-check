@@ -1,0 +1,260 @@
+.slide-passive {
+  display: none;
+}
+
+.slider__wrapper {
+  outline: 5px solid rgba(76, 223, 18, 0.8);
+  outline-offset: -5px;
+}
+
+.slider {
+  outline: 5px solid rgba(198, 194, 236, 0.8);
+  outline-offset: -5px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  position: relative;
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+}
+
+.slide__wrapper-img {
+  margin: 0 auto;
+  width: 280px;
+  height: 280px;
+  display: block;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+    order: 5;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    order: 0;
+    margin-bottom: 0;
+  }
+}
+
+.slide {
+  outline: 5px solid rgba(236, 194, 229, 0.8);
+  outline-offset: -5px;
+
+}
+
+.slide-active {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.slide__wrapper-text {
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
+}
+
+.slide__badge {
+  text-align: center;
+  display: block;
+  color: $base-primary;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.slider__pagination-list {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 202px;
+    height: 24px;
+    margin: 0 auto;
+  }
+}
+
+.slider__pagination-button {
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slider__pagination-button:hover,
+.slider__pagination-button:focus {
+  background-color: $primary-opacity-0-25;
+}
+
+.slider__pagination-button:active {
+  background-color: $base-primary;
+}
+
+
+
+.slide__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 280px;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+ 
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin: 0;
+    width: 728px;
+    text-shadow: none;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.slide__description {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 24px;
+    }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.slide__price {
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+ width: 230px;
+ margin: 0 auto;
+
+ @media (min-width: $desktop-width) {
+  margin-left: 0;
+}
+}
+
+.slide__price-buy {
+  width: 113px;
+  display: block;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400; 
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: $base-primary;
+  color: $base-white;
+  margin-left: 20px;
+ 
+}
+
+.slide__price-buy:hover,
+.slide__price-buy:focus {
+  background-color: $primary-lighter;
+}
+
+.slide__price-buy:active {
+  background-color: $primary-darker;
+}
+
+.slide__price-buy:disabled {
+  background-color:$base-grey;
+}
+
+.slide__price-old {
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+  text-decoration: line-through;
+}
+
+.slide__price-new {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  display: inline-block;
+  margin-left: 6px;
+
+}
+
+.slider__button-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -17px;
+  width: 112%;
+  display: flex;;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 98%;
+    right: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 101%;
+    right: -6px;
+  }
+}
+
+.slider__button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+
+}
+
+.slider__button--prev {
+  background-image: url("../../icons/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px 20px;
+}
+
+.slider__button--next {
+  transform: rotate(180deg);
+  background-image: url("../../icons/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 11px 20px;
+}

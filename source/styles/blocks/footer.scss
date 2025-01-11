@@ -9,7 +9,7 @@
 .footer__copyright-content {
   display: flex;
   justify-content: center;
-  width: 280px;
+  margin: 0 auto;
   font-size: 12px;
   line-height: 16px;
   color: $base-grey;
@@ -17,19 +17,19 @@
   
 }
 
-.copyright__link {
+.footer__copyright-link {
   text-decoration: none;
 }
 
-.copyright__link svg {
+.footer__copyright-link svg {
   fill: $base-grey;
 }
 
-.copyright__link:hover svg {
+.footer__copyright-link:hover svg {
   fill: $base-primary;
 }
 
-.copyright__link:active svg {
+.footer__copyright-link:active svg {
   fill: $primary-darker;
 }
 
@@ -73,14 +73,19 @@
 
   @media (min-width: $desktop-width) {
     display: block;
-    width: 350px;
+    width: 318px;
+    margin-right: 30px;
   }
 }
 
-.footer_inner-wrapper {
+.footer__inner-wrapper {
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+  }
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -157,7 +162,7 @@
   color: $primary-darker;
 }
 
-.page-footer__address {
+.footer__address {
   display: flex;
   font-style: normal;
   color: $base-black;
@@ -177,7 +182,7 @@
   }
 }
 
-.page-footer__phone {
+.footer__phone {
   display: flex;
   align-items: center;
   color: $base-black;
@@ -197,14 +202,14 @@
   }
 }
 
-.logo__text--footer {
+.footer__logo-text {
   display: none;
   @media (min-width: $desktop-width) {
     display: block;
   }
 }
 
-.social {
+.footer__social {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -212,35 +217,35 @@
   width: 160px;
 }
 
-.social a {
+.footer__social a {
   font-size: 0;
   padding: 0;
   line-height: 0;
 }
 
-.social_item {
+.footer__social-item {
   text-decoration: none;
   
   border-radius: 4px;
 }
 
-.social_item:hover {
+.footer__social-item:hover {
   background-color: $base-secondary;
 }
 
-.social_item:active {
+.footer__social-item:active {
   background-color: $primary-opacity-0-25;
 }
 
-.social_item svg {
+.footer__social-item svg {
   fill: $base-grey;
 }
 
-.social_item:hover svg {
+.footer__social-item:hover svg {
   fill: $base-primary;
 }
 
-.social_item:active svg {
+.footer__social-item:active svg {
   fill: $base-primary;
 }
 
@@ -258,9 +263,16 @@
   }
 }
 
-.logo__footer {
+.footer__logo {
 @media (min-width: $desktop-width) {
   display: block;
   margin-bottom: 60px;
+  }
+}
+
+.footer__wrapper {
+  @media (min-width: $desktop-width) {
+  display: flex;
+  width: 100%;
   }
 }

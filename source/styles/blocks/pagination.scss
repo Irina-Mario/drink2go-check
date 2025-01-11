@@ -1,0 +1,110 @@
+.pagination {
+  width: 100%;
+}
+
+.pagination__list {
+  display: flex;
+  width: 100%;
+  column-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 395px;
+    margin-left: auto;
+  }
+}
+
+.pagination__item {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  
+}
+
+.pagination__word {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.pagination__link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px;
+  color: $base-primary;
+  background-color: $base-white;
+}
+
+.pagination__link:hover,
+.pagination__link:focus {
+  @media (min-width: $tablet-width) {
+  background-color: $primary-lighter;
+  }
+}
+
+.pagination__link:active {
+
+  @media (min-width: $tablet-width) {
+    color: $primary-darker;
+  }
+}
+
+.pagination__link:disabled {
+  @media (min-width: $tablet-width) {
+    background-color: $light-grey;
+  }
+}
+
+
+.pagination__current .pagination__link {
+  @media (min-width: $tablet-width) {
+  color: $base-black;
+  font-weight: 700; 
+  background-color: transparent;
+  }
+}
+
+.pagination__prev {
+  background-image: url(../../icons/icon-pagination-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+
+    @media (min-width: $tablet-width) {
+      width: 91px;
+      background-image: none;
+    }
+}
+
+.pagination__link--prev {
+  @media (min-width: $tablet-width) {
+    width: 91px;
+  }
+}
+
+.pagination__next {
+  background-image: url(../../icons/icon-pagination-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+  transform: rotate(180deg);
+  @media (min-width: $tablet-width) {
+    width: 104px;
+    background-image: none;
+    transform: rotate(0deg);
+
+  }
+}
+
+.pagination__link--next {
+  @media (min-width: $tablet-width) {
+    width: 104px;
+  }
+}

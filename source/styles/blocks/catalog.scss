@@ -89,6 +89,10 @@
   padding: 0;
 }
 
+.catalog__form-title--price {
+  margin-bottom: 30px;
+}
+
 
 .range__scale {
   position: relative;
@@ -96,8 +100,13 @@
   background-color: $primary-lighter;
   width: 100%;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+  margin-bottom: 30px;
+  }
   @media (min-width: $desktop-width) {
     width: 318px;
+    
   }
 
 }
@@ -116,7 +125,7 @@
   height: 24px;
   top: 50%;
   transform: translateY(-50%);
-  right: 216px;
+  right: 243px;
 }
 
 .range__button--max {
@@ -125,7 +134,7 @@
   height: 24px;
   top: 50%;
   transform: translateY(-50%);
-  right: 9px;
+  right: 7px;
 }
 
 .range__toggle {
@@ -192,15 +201,16 @@
 }
 
 .catalog__enter-price {
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 24px;
   border: 2px solid $primary-lighter;
   background-color: $base-white;
   width: 118px;
   height: 40px;
-  padding: 0;
-  border-radius: 8px;
+  border-radius: 5px;
   padding: 8px 10px;
+  text-align: center;
   
   @media (min-width: $tablet-width) {
   width: 87;
@@ -243,6 +253,7 @@
   font-size: 16px;
   line-height: 24px;
 }
+
 
 .catalog__filter-input[type="radio"] {
   appearance: none;
@@ -461,9 +472,27 @@ border: 2px solid $base-primary;
 .catalog__filter {
   outline: 5px solid rgba(82, 45, 45, 0.8);
   outline-offset: -5px;
+  margin-bottom: 24px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
   @media (min-width: $desktop-width) {
     width: 318px;
+
 }
+}
+
+.product-catalog__list {
+  margin-bottom: 40px;
+    @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 349px);
+    gap: 30px 30px;
+    margin-bottom: 70px;
+  }
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(3, 317px);
+  }
 }
 
 .catalog-cards {
@@ -489,15 +518,8 @@ border: 2px solid $base-primary;
   }
 }
 
-.product-catalog__list {
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 349px);
-    gap: 30px 30px;
-    margin-bottom: 70px;
-  }
-  @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(3, 317px);
-  }
 
+
+.catalog__filter-item:last-child {
+  margin-bottom: 0;
 }

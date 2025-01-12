@@ -5,14 +5,19 @@
 .header__container {
   min-height: 60px;
   margin: 0 auto;
+  
   outline: 5px solid rgba(255, 0, 0, 0.8);
   outline-offset: -5px;
+  
   position: relative;
-
   display: flex;
   justify-content: space-between;
   align-content: center;
   
+  
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+  }
 }
 
 .header__nav {
@@ -26,19 +31,29 @@
   right: 0;
   top: 60px;
   border-bottom: 1px solid $lightest-grey;
-  //display: none;
   outline: 5px solid rgba(161, 128, 128, 0.8);
   outline-offset: -5px;
 
   @media (min-width: $tablet-width) {
-  position: static;
-  min-height: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
+    position: static;
+    min-height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
+.navigation-show {
+ display: block;
+
+}
+
+.navigation-hidden {
+  display: none;
+  @media (min-width: $tablet-width) {
+display: flex;
+  }
 }
 
 .navigation__list {
@@ -47,8 +62,8 @@
 
   @media (min-width: $tablet-width) {
   display: flex;
-  width: 500px;
-  max-height: 60px;
+
+  max-height: 80px;
   justify-content: center;
   align-items: center;
   outline: 5px solid rgba(31, 20, 61, 0.8);
@@ -98,7 +113,6 @@
 
 }
 
-
 .header__cart {
   width: 60px;
   height: 60px;
@@ -118,7 +132,7 @@
   }
 }
 
-.header__toggle {
+.header__toggle-button {
   display: block;
   width: 60px;
   height: 60px;
@@ -132,11 +146,26 @@
   }
 }
 
-.header__toggle:active {
+.header__toggle-button:active {
   background-color: $base-secondary; 
 }
 
-.header__toggle::before {
+.header__toggle-button-close::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  background-image: url("../../icons/icon-close-menu.svg");
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__toggle-button-open::before {
   content: "";
   display: block;
   margin: 0 auto;
@@ -150,6 +179,9 @@
     display: none;
   }
 }
+
+
+
 
 .header__text {
   display: none;

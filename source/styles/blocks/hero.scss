@@ -1,4 +1,30 @@
-.hero {
+.hero.bg-slide-3 {
+  background-color: $espresso;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient($espresso 75%, $base-white 25%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $espresso;
+    background-image: none;
+  }
+}
+
+.hero.bg-slide-2 {
+  background-color: $flat-white;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient($flat-white 75%, $base-white 25%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $flat-white;
+    background-image: none;
+  }
+}
+
+.hero.bg-slide-1 {
   background-color: $flat-white;
 
   @media (min-width: $tablet-width) {

@@ -1,21 +1,26 @@
 .catalog-cards__select {
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 13px;
+  display: flex;
+  margin-left: 4px;
+
 
   @media (min-width: $tablet-width) {
   width: 292px;
   margin-left: auto;
   margin-bottom: 30px;
+  margin-right: 5px;
   }
 }
 
 .select-wrapper__title {
+  margin-right: 5px;
   font-size: 16px;
-  line-height: 24px;
   font-weight: 600;
+  line-height: 24px;
+  @media (min-width: $tablet-width) {
+    margin-left: 14px;
+  }
 }
 
 .select-control {
@@ -25,9 +30,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  width: 165px;
   color: $base-primary;
-  padding: 4px 27px 4px 10px;
   border: none;
   background-color: transparent; 
 }
@@ -40,8 +43,8 @@
   height: 7px;
   background-image: url(../../icons/icon-select.svg);
   background-repeat: no-repeat;
- left: 141px;
- bottom: 18px;
+  left: 132px;
+  bottom: 15px;
  
 }
 

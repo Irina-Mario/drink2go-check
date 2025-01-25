@@ -4,10 +4,14 @@
 
 .pagination__list {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   column-gap: 20px;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
   @media (min-width: $tablet-width) {
     width: 395px;
@@ -17,13 +21,13 @@
 
 .pagination__item {
   width: 40px;
-  height: 40px;
+  min-height: 40px;
   border-radius: 4px;
-  
 }
 
 .pagination__word {
   display: none;
+
   @media (min-width: $tablet-width) {
     display: block;
   }
@@ -31,7 +35,7 @@
 
 .pagination__link {
   width: 40px;
-  height: 40px;
+  min-height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,17 +44,17 @@
   padding: 8px;
   color: $base-primary;
   background-color: $base-white;
+  text-decoration: none;
 }
 
 .pagination__link:hover,
 .pagination__link:focus {
   @media (min-width: $tablet-width) {
-  background-color: $primary-lighter;
+    background-color: $primary-lighter;
   }
 }
 
 .pagination__link:active {
-
   @media (min-width: $tablet-width) {
     color: $primary-darker;
   }
@@ -65,22 +69,22 @@
 
 .pagination__current .pagination__link {
   @media (min-width: $tablet-width) {
-  color: $base-black;
-  font-weight: 700; 
-  background-color: transparent;
+    color: $base-black;
+    font-weight: 700;
+    background-color: transparent;
   }
 }
 
 .pagination__prev {
-  background-image: url(../../icons/icon-pagination-button.svg);
+  background-image: url("../../icons/icon-pagination-button.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px 10px;
 
-    @media (min-width: $tablet-width) {
-      width: 91px;
-      background-image: none;
-    }
+  @media (min-width: $tablet-width) {
+    width: 91px;
+    background-image: none;
+  }
 }
 
 .pagination__link--prev {
@@ -90,16 +94,16 @@
 }
 
 .pagination__next {
-  background-image: url(../../icons/icon-pagination-button.svg);
+  background-image: url("../../icons/icon-pagination-button.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px 10px;
   transform: rotate(180deg);
+
   @media (min-width: $tablet-width) {
     width: 104px;
     background-image: none;
     transform: rotate(0deg);
-
   }
 }
 

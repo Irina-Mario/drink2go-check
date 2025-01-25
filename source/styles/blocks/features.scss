@@ -1,6 +1,15 @@
 .features__container {
   padding-top: 50px;
   padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 77px;
+  }
 }
 
 .features__badge {
@@ -13,9 +22,6 @@
   letter-spacing: 0.48px;
   text-transform: uppercase;
   margin-bottom: 4px;
-
-
-
 }
 
 .features__title {
@@ -28,7 +34,6 @@
   text-align: center;
   display: block;
   margin-bottom: 35px;
- 
 
   @media (min-width: $tablet-width) {
     font-size: 42px;
@@ -40,27 +45,26 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1400px;
-    margin-bottom: 80px;
+    margin-bottom: 83px;
+    width: 1360px;
   }
 }
-
 
 .features__list {
   display: flex;
   flex-direction: column;
   width: 280px;
-  padding: 0;
-  margin: 0;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
   @media (min-width: $tablet-width) {
-  width: 708px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 44px;
+    width: 708px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 44px;
   }
 
   @media (min-width: $desktop-width) {
@@ -98,9 +102,9 @@
   }
 
   @media (min-width: $desktop-width) {
-      margin-left: 0;
-      margin-top: 73px;
-      text-align: center;
+    margin-left: 0;
+    margin-top: 73px;
+    text-align: center;
   }
 }
 
@@ -109,21 +113,19 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    margin-left: 73px;
     margin-top: 0;
     text-align: left;
     font-size: 16px;
     line-height: 24px;
-    margin-left: 82px
-    }
+    margin-left: 82px;
+  }
 
-    @media (min-width: $desktop-width) {
-      margin-left: 0;
-      margin-top: 0;
-      text-align: center;
-    }
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+  }
 }
-
 
 .features__item--speed {
   background-image: url("../../icons/icon-speed.svg");
@@ -137,7 +139,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-position: top;
+    background-position: 133px -3px;
+    padding-right: 20px;
   }
 }
 
@@ -153,9 +156,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-position: top;
+    background-position: 142px -3px;
+    padding-right: 6px;
   }
 }
+
 .features__item--energy {
   background-image: url("../../icons/icon-energy.svg");
   background-position: top;
@@ -164,11 +169,12 @@
 
   @media (min-width: $tablet-width) {
     background-size: 52px 56px;
-    background-position: 9px 0px;
+    background-position: 9px 0;
   }
 
   @media (min-width: $desktop-width) {
-    background-position: top;
+    background-position: 147px -3px;
+    padding-left: 6px;
   }
 }
 
@@ -180,10 +186,11 @@
 
   @media (min-width: $tablet-width) {
     background-size: 52px 56px;
-    background-position: 10px 3px;
+    background-position: 11px 3px;
   }
 
   @media (min-width: $desktop-width) {
-    background-position: top;
+    background-position: 155px -3px;
+    padding-left: 23px;
   }
 }

@@ -39,6 +39,7 @@
     margin-right: 30px;
   }
 }
+
 .slide__content-wrapper {
   display: flex;
   flex-direction: column;
@@ -48,7 +49,6 @@
     align-items: center;
   }
 }
-
 
 .slide__wrapper-text {
   @media (min-width: $desktop-width) {

@@ -105,7 +105,6 @@
   text-decoration: none;
   color: $base-black;
 
-
   @media (min-width: $tablet-width) {
     min-height: 80px;
   }
@@ -147,7 +146,6 @@
   color: $base-primary;
 }
 
-
 .header__user:hover path,
 .header__user:focus path,
 .header__user:active path {
@@ -163,7 +161,6 @@
   color: $base-black;
   justify-content: center;
   align-items: center;
-
 
   @media (min-width: $tablet-width) {
     min-height: 80px;
@@ -252,7 +249,6 @@
   }
 }
 
-
 .header__logo-text {
   display: none;
 
@@ -265,7 +261,6 @@
     color: $base-black;
   }
 }
-
 
 .header__logo-icon {
   @media (min-width: $desktop-width) {

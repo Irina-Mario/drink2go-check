@@ -1,4 +1,4 @@
-.hero.bg-slide-3 {
+.hero.bg-slide-2 {
   background-color: $espresso;
 
   @media (min-width: $tablet-width) {
@@ -11,20 +11,20 @@
   }
 }
 
-.hero.bg-slide-2 {
-  background-color: $flat-white;
+.hero.bg-slide-1 {
+  background-color: $lavender-latte;
 
   @media (min-width: $tablet-width) {
-    background-image: linear-gradient($flat-white 76%, $base-white 24%);
+    background-image: linear-gradient($lavender-latte 76%, $base-white 24%);
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $flat-white;
+    background-color: $lavender-latte;
     background-image: none;
   }
 }
 
-.hero.bg-slide-1 {
+.hero.bg-slide-0 {
   background-color: $flat-white;
 
   @media (min-width: $tablet-width) {

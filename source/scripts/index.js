@@ -1,9 +1,8 @@
 /* в этот файл добавляет скрипты*/
-//**  Кнопка мобильного меню */
+/*  Кнопка мобильного меню 
 
 const modalMenu = document.querySelector('.header__nav');
 const toggleElement = document.querySelector('.header__toggle-button');
-
 
 toggleElement.addEventListener('click', () => {
   toggleElement.classList.toggle('header__toggle-button-open');
@@ -11,9 +10,9 @@ toggleElement.addEventListener('click', () => {
   modalMenu.classList.toggle('navigation-show');
 });
 
-/** Слайдер**/
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.slider__button--prev');
+/* Слайдер*/
+
+/*const prevButton = document.querySelector('.slider__button--prev');
 const nextButton = document.querySelector('.slider__button--next');
 const slides = Array.from(slider.querySelectorAll('.slide'));
 const slideCount = slides.length;
@@ -45,4 +44,4 @@ function updateSlider() {
 }
 
 
-updateSlider();
+updateSlider(); */
